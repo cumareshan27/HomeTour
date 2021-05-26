@@ -18,10 +18,13 @@ public class Game {
 	public Game() {
 		this.map = new ArrayList<Room>();
 		
+		map.add(new Room("Foyer", "Place to enter the house","Main Entrance" , Direction.NOEXIT, Direction.NOEXIT, 3, Direction.NOEXIT));
 		map.add(new Room("Dinning Room", "Place to Dine","Room with Formal Dinning table" , 1, 2, Direction.NOEXIT, Direction.NOEXIT));
 		map.add(new Room("Living Room", "Primary Living","Room to gather and entertain" , 1, 2, 3, 4));
 		map.add(new Room("Great Room", "Entertaining","Gather as a family" , 1, 2, 3, Direction.NOEXIT));
 		map.add(new Room("Laundry Room", "Utility","Mud room" , 1, Direction.NOEXIT, Direction.NOEXIT, Direction.NOEXIT));
 		
+		//creating anew player
+		player = new Player("Player1", "Kumar", map.get(0));
 	}
 }
